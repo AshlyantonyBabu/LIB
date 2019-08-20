@@ -16,7 +16,7 @@ rt.get("/",function(req,res){
     lib.find({},function(err,result){
         if(err)throw err
         else{
-            res.render('books',{nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"}],Pagetitle:"Library",array_book:result}) 
+            res.render('books',{nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/",Title:"Log Out"}],Pagetitle:"Library",array_book:result}) 
         }
     })
   //  res.render('books',{nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"}],Pagetitle:"Library",array_book:book_array})
@@ -32,7 +32,7 @@ lib.findOne(qry,function(err,result){
 
     console.log(result)
     res.render('readmr',
-    {nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"}],
+    {nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/",Title:"Log Out"}],
     Pagetitle:"BOOKS",
     array_book:result}
     );

@@ -3,7 +3,7 @@ var libsch=mon.Schema
 var libschema=new libsch({
     name:{type:String,required:true},
     dob:{type:String,required:true},
-   
+    id:{type:String,required:true},
     pic:{type:String,required:true}
 })
 
