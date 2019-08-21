@@ -15,7 +15,7 @@ module.exports=auroot;
 auroot.get("/",function(req,res){
     lib.find({},function(err,result){
         //console.log(arr_authors.length)
-        res.render("author",{nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/",Title:"Log Out"}],Pagetitle:"Authors",authrlist:result.sort()})
+        res.render("author",{nav:[{link:"/",Title:"Home"},{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/",Title:"Log Out"}],Pagetitle:"Authors",authrlist:result.sort()})
     })
    
 })
@@ -29,7 +29,7 @@ auroot.get("/:id",function(req,res){
         if(err)throw err
         else{
         console.log(result)
-        res.render("readmrau",{nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/",Title:"Log Out"}],Pagetitle:"Authors",authrlist:result})
+        res.render("readmrau",{nav:[{link:"/",Title:"Home"},{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/",Title:"Log Out"}],Pagetitle:"Authors",authrlist:result})
   
       } 
      })

@@ -24,11 +24,11 @@ app.use("/book",rout)
 app.use("/user",rrtt)
 app.use("/author",rrout)
 app.get("/index",function(req,res){
- res.render('index',{nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/user/add",Title:"NEW Book"}],Pagetitle:"Library"})
+ res.render('index',{nav:[{link:"/",Title:"Home"},{link:"/book",Title:"Book"},{link:'/author',Title:"Author"},{link:"/user/add",Title:"NEW Book"}],Pagetitle:"Library"})
 //res.sendFile(__dirname+"/src/view/index.html")
 })
 app.get("/",function(req,res){
-    res.render('Login',{nav:[{link:"/book",Title:"Book"},{link:'/author',Title:"Author"}],Pagetitle:"Library"})
+    res.render('Login',{nav:[{link:"/",Title:"Home"}],Pagetitle:"Library"})
   
    })
   
